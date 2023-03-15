@@ -12,15 +12,15 @@
 
 1. 长按方向盘右侧的 **`SRC`** 按钮设置车辆静音，再次长按 **`SRC`** 取消车辆静音
     ::: details 点击查看按钮预览图
-    ![sheering wheel right](./images/steering-wheel-right.png)
+    ![sheering wheel right](./images/steering-wheel-right.jpg)
     :::
 2. 同时按下方向盘左侧的音量减和音量加来设置车辆静音，再次同时按下取消车辆静音
     ::: details 点击查看按钮预览图
-    ![sheering wheel left](./images/steering-wheel-left.png)
+    ![sheering wheel left](./images/steering-wheel-left.jpg)
     :::
 3. 按下中控钢琴键左侧的音量调节旋钮设置车辆静音，再次按下取消车辆静音
     ::: details 点击查看旋钮预览图
-    ![volume adjustment button](images/volume-adjustment-button.png)
+    ![volume adjustment button](images/volume-adjustment-button.jpg)
     :::
 
 以上操作方式中，`1`、`2` 是针对主驾驶操作，而 `3` 则是针对主副驾驶均可操作，达到快速实现多媒体静音的效果。
@@ -31,11 +31,11 @@
 
 1. 长按方向盘音量减来降低多媒体音量直至静音，待需要取消静音时长按音量加增加多媒体音量
    ::: details 点击查看按钮预览图
-   ![sheering wheel left](./images/steering-wheel-left.png)
+   ![sheering wheel left](./images/steering-wheel-left.jpg)
    :::
 2. 转动中控钢琴键左侧的音量调节，向左转动旋钮降低音量，直至静音，向右转动旋钮增加音量
    ::: details 点击查看旋钮预览图
-   ![volume adjustment button](images/volume-adjustment-button.png)
+   ![volume adjustment button](images/volume-adjustment-button.jpg)
    :::
 
 > **注意：**
