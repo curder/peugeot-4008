@@ -6,6 +6,9 @@ export default defineConfig({
     title: "experience of using Peugeot 4008",
     description: "Record some experience of using Peugeot 4008.",
     lastUpdated: true,
+    head: [
+        ['link', {rel: 'icon', href: '/peugeot-4008/images/favicon.ico'}],
+    ],
     themeConfig: {
         logo: "/images/logo.svg",
         siteTitle: "标致 4008",
