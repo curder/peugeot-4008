@@ -8,7 +8,7 @@ export default defineConfig({
     lastUpdated: true,
     themeConfig: {
         logo: "/images/logo.svg",
-        siteTitle: "Peugeot 4008",
+        siteTitle: "标致 4008",
         outline: {
             label: "章节导航",
             level: 'deep',
@@ -36,7 +36,7 @@ export default defineConfig({
 function nav()
 {
     return [
-        {text: "技巧", link: "/guide/skills/mute", activeMatch: "/guide/skills/"}
+        {text: "小技巧", link: "/guide/skills/mute", activeMatch: "/guide/skills/"}
     ];
 }
 
