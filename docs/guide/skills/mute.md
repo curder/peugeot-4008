@@ -11,6 +11,7 @@
 ## 快速静音
 
 1. 长按方向盘右侧的 **`SRC`** 按钮设置车辆静音，再次长按 **`SRC`** 取消车辆静音
+    > **推荐使用这种方式短暂保持多媒体静音，理由：操作便捷。**
     ::: details 点击查看按钮预览图
     ![sheering wheel right](./images/steering-wheel-right.jpg)
     :::
