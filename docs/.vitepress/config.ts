@@ -36,13 +36,18 @@ export default defineConfig({
 function nav()
 {
     return [
-        //
+        {text: "技巧", link: "/guide/skills/mute", activeMatch: "/guide/skills/"}
     ];
 }
 
 function sidebarGuide()
 {
     return [
-        //
+        {
+            text: "",
+            items: [
+                {text: "多媒体静音", link: "/guide/skills/mute"},
+            ]
+        }
     ];
 }
