@@ -39,7 +39,7 @@ export default defineConfig({
 function nav()
 {
     return [
-        {text: "小技巧", link: "/guide/skills/mute", activeMatch: "/guide/skills/"}
+        {text: "一些技巧", link: "/guide/skills/unique-design", activeMatch: "/guide/skills/"}
     ];
 }
 
