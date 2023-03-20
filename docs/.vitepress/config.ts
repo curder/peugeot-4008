@@ -49,8 +49,8 @@ function sidebarGuide()
         {
             text: "",
             items: [
-                {text: "多媒体静音", link: "/guide/skills/mute"},
                 {text: "独特设计", link: "/guide/skills/unique-design"},
+                {text: "多媒体静音", link: "/guide/skills/mute"},
             ]
         }
     ];
