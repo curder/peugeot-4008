@@ -39,7 +39,8 @@ export default defineConfig({
 function nav()
 {
     return [
-        {text: "一些技巧", link: "/guide/skills/unique-design", activeMatch: "/guide/skills/"}
+        {text: "一些技巧", link: "/guide/skills/unique-design", activeMatch: "/guide/skills/"},
+        {text: "费用清单", link: "/consumption-list", activeMatch: "/consumption-list"},
     ];
 }
 
