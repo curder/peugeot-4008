@@ -30,7 +30,8 @@ export default defineConfig({
         ],
         nav: nav(),
         sidebar: {
-            "/guide": sidebarGuide(),
+            "/guide/basic": sidebarGuideBasic(),
+            "/guide/skills": sidebarGuideSkills(),
         }
     }
 });
@@ -39,12 +40,24 @@ export default defineConfig({
 function nav()
 {
     return [
+        {text: "基础", link: "/guide/basic/light-control", activeMatch: "/guide/basic/"},
         {text: "一些技巧", link: "/guide/skills/unique-design", activeMatch: "/guide/skills/"},
         {text: "费用清单", link: "/consumption-list", activeMatch: "/consumption-list"},
     ];
 }
 
-function sidebarGuide()
+function sidebarGuideBasic() {
+    return [
+        {
+            text: "",
+            items: [
+                {text: "灯光控制", link: "/guide/basic/light-control"},
+            ]
+        }
+    ];
+}
+
+function sidebarGuideSkills()
 {
     return [
         {
