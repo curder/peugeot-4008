@@ -67,7 +67,7 @@
 
 雾灯的使用场景一般是在起雾、下雨、雪、沙尘、冰雹等能见度低的时候使用，它在极端条件下穿透力极强，最关键的作用是提示他人。
 
-它的使用可以参考[切换雾灯](/guide/skills/unique-design.html#切换雾灯)
+它的使用可以参考[切换雾灯](/guide/skills/unique-design.md#切换雾灯)
 
 ## 位置灯
 
@@ -119,6 +119,3 @@
 ::: details 查看向左转向灯控制预览图
 ![](light-control/left-turn-signal-lights.jpg)
 :::
-
-
-
