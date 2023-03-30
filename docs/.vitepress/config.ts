@@ -10,7 +10,7 @@ export default defineConfig({
         ['link', {rel: 'icon', href: '/peugeot-4008/images/favicon.ico'}],
     ],
     themeConfig: {
-        logo: "/images/logo.svg",
+        logo: "/images/peugeot-old-logo.svg",
         siteTitle: "标致 4008",
         outline: {
             label: "章节导航",
