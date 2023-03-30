@@ -51,7 +51,7 @@ function sidebarGuideBasic() {
         {
             text: "",
             items: [
-                {text: "灯光控制", link: "/guide/basic/light-control"},
+                {text: "外部灯光控制", link: "/guide/basic/light-control"},
             ]
         }
     ];
