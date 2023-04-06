@@ -52,6 +52,7 @@ function sidebarGuideBasic() {
             text: "",
             items: [
                 {text: "外部灯光控制", link: "/guide/basic/light-control"},
+                {text: "巡航系统", link: "/guide/basic/cruise-system"},
             ]
         }
     ];
