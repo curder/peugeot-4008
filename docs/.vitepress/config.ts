@@ -31,7 +31,7 @@ export default defineConfig({
         nav: nav(),
         sidebar: {
             "/guide/basic": sidebarGuideBasic(),
-            "/guide/skills": sidebarGuideSkills(),
+            "/guide/others": sidebarGuideOthers(),
         }
     }
 });
@@ -41,8 +41,8 @@ function nav()
 {
     return [
         {text: "基础", link: "/guide/basic/light-control", activeMatch: "/guide/basic/"},
-        {text: "一些技巧", link: "/guide/skills/unique-design", activeMatch: "/guide/skills/"},
-        {text: "费用清单", link: "/consumption-list", activeMatch: "/consumption-list"},
+        {text: "其它", link: "/guide/others/faqs", activeMatch: "/guide/others/"},
+        // {text: "费用清单", link: "/guide/others/consumption-list", activeMatch: "/consumption-list"},
     ];
 }
 
@@ -58,14 +58,13 @@ function sidebarGuideBasic() {
     ];
 }
 
-function sidebarGuideSkills()
-{
+function sidebarGuideOthers() {
     return [
         {
             text: "",
             items: [
-                {text: "独特设计", link: "/guide/skills/unique-design"},
-                {text: "多媒体静音", link: "/guide/skills/mute"},
+                {text: "常见问题", link: "/guide/others/faqs"},
+                {text: "多媒体静音", link: "/guide/others/mute"},
             ]
         }
     ];
