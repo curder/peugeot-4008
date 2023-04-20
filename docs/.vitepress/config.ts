@@ -65,6 +65,7 @@ function sidebarGuideOthers() {
             items: [
                 {text: "常见问题", link: "/guide/others/faqs"},
                 {text: "多媒体静音", link: "/guide/others/mute"},
+                {text: "养车费用", link: "/guide/others/consumption-list"},
             ]
         }
     ];
