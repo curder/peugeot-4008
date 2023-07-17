@@ -3,14 +3,11 @@ import FuelCosts from './fuel-costs'
 import {ref} from 'vue';
 
 const header_keys = Object.keys(FuelCosts.headers)
-const hide = ref(false)
 
-const loadMore = () => {
-  hide.value = true
-}
-const loadLess = () => {
-  hide.value = false
-}
+const load_item_length = 10
+const hide = ref(false)
+const loadMore = () => { hide.value = true }
+const loadLess = () => { hide.value = false }
 </script>
 <template>
   <table>
@@ -21,7 +18,7 @@ const loadLess = () => {
     </thead>
     <tbody>
     <template v-for="(data, key) in FuelCosts.detail" :key="key">
-      <tr v-if="!hide && key < 10">
+      <tr v-if="!hide && key < load_item_length">
         <td v-html="data[header_keys[0]]"></td>
         <td v-html="data[header_keys[1]]"></td>
         <td v-html="data[header_keys[2]]"></td>
