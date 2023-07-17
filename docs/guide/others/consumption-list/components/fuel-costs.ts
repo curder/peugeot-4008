@@ -1,4 +1,4 @@
-const detail: {date: string, unit_price, oil_volume, amount: number}[] = [
+const detail: {date: string, unit_price, oil_volume, amount: number, type?: string}[] = [
     {date: "2023-07-16", unit_price: 8.09, oil_volume: 24.73, amount: 200.00},
     {date: "2023-06-24", unit_price: 7.97, oil_volume: 26.35, amount: 210.00},
     {date: "2023-06-24", unit_price: 7.92, oil_volume: 32.08, amount: 254.00},
