@@ -45,7 +45,7 @@ const prices= detail.map((data) => data.unit_price);
 
 export default {
     headers: {date: '日期', unit_price: '单价', oil_volume: '油量', type: '型号', amount: '金额'},
-    load_item_length: 10,
+    load_item_length: 5,
     total_kilometers: 18300,
     detail: detail.map((data) => {
          return {

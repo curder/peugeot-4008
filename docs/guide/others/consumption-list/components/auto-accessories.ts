@@ -19,7 +19,7 @@ const detail: { date: string, price: number, platform: string, description: stri
 
 export default {
     headers: {date: '购买日期', price: '价格', platform: '平台', description: '其它说明'},
-    load_item_length: 10,
+    load_item_length: 5,
     detail: detail.map((data: { date: string, price: number, platform: string, description: string }) => {
         return {
             date: data.date,
