@@ -1,5 +1,6 @@
 export default {
     headers: {date: '日期', unit_price: '单价', oil_volume: '油量', type: '型号', amount: '金额'},
+    total_kilometers: 18300,
     detail: [
         {date: "2023-07-16", unit_price: 8.09, oil_volume: 24.73, amount: 200.00},
         {date: "2023-06-24", unit_price: 7.97, oil_volume: 26.35, amount: 210.00},

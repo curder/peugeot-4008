@@ -17,9 +17,8 @@ import FuelCostStatistics from './components/FuelCostStatistics.vue';
 
 购车车价为：168,000 (含车辆购置税和交强险)，保险：4,258.59，总计：**171,308.59**。
 
-## 油费
 
-> 当前公里数：**18300** 公里。<FuelCostStatistics />
+<FuelCostStatistics />
 
 <FuelCosts />
 
