@@ -1,4 +1,8 @@
 const detail: {date: string, unit_price, oil_volume, amount: number, type?: string}[] = [
+    {date: "2023-10-04", unit_price: 8.90, oil_volume: 35.40, amount: 315.00},
+    {date: "2023-10-04", unit_price: 8.98, oil_volume: 45.66, amount: 410.00},
+    {date: "2023-10-02", unit_price: 8.90, oil_volume: 41.58, amount: 370.00},
+    {date: "2023-09-29", unit_price: 8.98, oil_volume: 38.97, amount: 350.00},
     {date: "2023-07-16", unit_price: 8.09, oil_volume: 24.73, amount: 200.00},
     {date: "2023-06-24", unit_price: 7.97, oil_volume: 26.35, amount: 210.00},
     {date: "2023-06-24", unit_price: 7.92, oil_volume: 32.08, amount: 254.00},
@@ -46,7 +50,7 @@ const prices= detail.map((data) => data.unit_price);
 export default {
     headers: {date: '日期', unit_price: '单价', oil_volume: '油量', type: '型号', amount: '金额'},
     load_item_length: 5,
-    total_kilometers: 18300,
+    total_kilometers: 20700,
     detail: detail.map((data) => {
          return {
             date: data.date,
