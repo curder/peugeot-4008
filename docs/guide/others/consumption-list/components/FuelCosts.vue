@@ -1,18 +1,18 @@
-<script setup>
+<script setup lang="ts">
 import fuelCosts from './fuel-costs'
 import {ref} from 'vue';
 
 const header_keys = Object.keys(fuelCosts.headers)
 
 const hide = ref(false)
-const loadMore = () => { hide.value = true }
-const loadLess = () => { hide.value = false }
+const loadMore = () => hide.value = true
+const loadLess = () => hide.value = false
 </script>
 <template>
   <h2>油费</h2>
   <blockquote>
     <p>当前公里数：<strong>{{ fuelCosts.total_kilometers }}</strong> 公里。</p>
-    <br />
+    <br/>
     <p>
       消耗总油量：<strong>{{ fuelCosts.total_oil_volume }}</strong>升，
       平均油价：<strong>{{ fuelCosts.price_avg }}</strong>元，

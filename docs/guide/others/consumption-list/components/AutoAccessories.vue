@@ -1,16 +1,12 @@
-<script setup>
+<script setup lang="ts">
 import autoAccessories from "./auto-accessories";
 import { ref } from 'vue';
 
 const header_keys = Object.keys(autoAccessories.headers)
 
 const hide = ref(false)
-const loadMore = () => {
-  hide.value = true
-}
-const loadLess = () => {
-  hide.value = false
-}
+const loadMore = () => hide.value = true
+const loadLess = () => hide.value = false
 </script>
 <template>
   <h2>汽车用品</h2>

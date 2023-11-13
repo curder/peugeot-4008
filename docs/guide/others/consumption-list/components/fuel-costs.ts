@@ -1,4 +1,13 @@
-const detail: {date: string, unit_price, oil_volume, amount: number, type?: string}[] = [
+interface Item {
+    date: string,
+    unit_price: number,
+    oil_volume: any,
+    amount: any,
+    type?: string,
+}
+
+const detail: Item[] = [
+    {date: "2023-11-13", unit_price: 8.72, oil_volume: 22.94, amount: 200.00},
     {date: "2023-10-04", unit_price: 8.90, oil_volume: 35.40, amount: 315.00},
     {date: "2023-10-04", unit_price: 8.98, oil_volume: 45.66, amount: 410.00},
     {date: "2023-10-02", unit_price: 8.90, oil_volume: 41.58, amount: 370.00},
@@ -45,14 +54,14 @@ const detail: {date: string, unit_price, oil_volume, amount: number, type?: stri
     {date: "2023-03-10", unit_price: 8.29, oil_volume: 45.80, amount: 379.68},
     {date: "2023-02-28", unit_price: 8.32, oil_volume: 50.50, amount: 420.16},
 ];
-const prices= detail.map((data) => data.unit_price);
+const prices: number[] = detail.map((data) => data.unit_price);
 
 export default {
     headers: {date: '日期', unit_price: '单价', oil_volume: '油量', type: '型号', amount: '金额'},
     load_item_length: 5,
     total_kilometers: 20700,
-    detail: detail.map((data) => {
-         return {
+    detail: detail.map((data: Item): Item => {
+        return {
             date: data.date,
             unit_price: data.unit_price,
             oil_volume: data.oil_volume.toFixed(2),
@@ -60,7 +69,7 @@ export default {
             amount: data.amount.toFixed(2),
         };
     }),
-    total_oil_volume: detail.map((data) => data.oil_volume).reduce((prev, curr) => prev + curr).toFixed(2),
-    price_avg: (prices.reduce(((prev, curr) => prev + curr)) / prices.length).toFixed(2),
-    total_amount: detail.map((data) => Number(data.amount)).reduce((prev, curr) => prev + curr).toFixed(2),
+    total_oil_volume: detail.map((data: Item) => data.oil_volume).reduce((prev, curr) => prev + curr).toFixed(2),
+    price_avg: (prices.reduce(((prev: number, curr: number) => prev + curr)) / prices.length).toFixed(2),
+    total_amount: detail.map((data: Item) => Number(data.amount)).reduce((prev: number, curr: number) => prev + curr).toFixed(2),
 }

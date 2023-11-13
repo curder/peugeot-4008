@@ -2,7 +2,7 @@
 aside: false
 ---
 
-<script setup>
+<script setup lang="ts">
 import FuelCosts from './components/FuelCosts.vue';
 import AutoAccessories from './components/AutoAccessories.vue';
 </script>
