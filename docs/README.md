@@ -8,5 +8,5 @@
     - 企业名称：神龙汽车有限公司
     - 车型型号：DC6456KLCB16
 
-    ![](/images/emission-standards.jpg)
+    ![](/images/emission-standards.png)
     :::
