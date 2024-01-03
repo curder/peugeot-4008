@@ -7,6 +7,7 @@ interface Item {
 }
 
 const detail: Item[] = [
+    {date: "2024-01-03", unit_price: 8.03, oil_volume: 24.91, amount: 200.00},
     {date: "2023-11-24", unit_price: 8.43, oil_volume: 23.73, amount: 200.00},
     {date: "2023-11-13", unit_price: 8.72, oil_volume: 22.94, amount: 200.00},
     {date: "2023-10-04", unit_price: 8.90, oil_volume: 35.40, amount: 315.00},
