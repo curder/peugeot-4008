@@ -12,12 +12,13 @@ interface Item {
     description: string,
 }
 const detail: Item[] = [
-    {date: "2023-07-12", price: 117.74, platform: Platform.xy, description: "LanParte汽车拍摄车载手机支架万向固定车内吸盘式越野车专用防抖"},
+    {date: "2023-12-31", price: 97.18, platform: Platform.jd, description: "<small>蓝星(BLUESTAR)四季玻璃水清洗剂-30℃ 2L 8瓶去油膜玻璃清洁剂</small>"},
+    {date: "2023-07-12", price: 117.74, platform: Platform.xy, description: "<small>LanParte汽车拍摄车载手机支架万向固定车内吸盘式越野车专用防抖</small>"},
     {date: "2023-06-06", price: 178.8, platform: Platform.jd, description: "米家小米充气宝2"},
     {date: "2023-06-06", price: 13.87, platform: Platform.pdd, description: "械式胎压表胎压监测仪"},
     {date: "2023-05-29", price: 6.93, platform: Platform.tb, description: "座椅挂钩"},
-    {date: "2023-05-18", price: 31.00, platform: Platform.tb, description: "汽车遮阳伞车窗遮阳帘防晒隔热遮阳挡前挡风玻璃罩车内前板车载用"},
-    {date: "2023-05-06", price: 13.60, platform: Platform.jd, description: "蓝星（BLUESTAR）普通玻璃水清洁剂-2℃ 2L 2瓶去油膜玻璃清洁剂"},
+    {date: "2023-05-18", price: 31.00, platform: Platform.tb, description: "<small>汽车遮阳伞车窗遮阳帘防晒隔热遮阳挡前挡风玻璃罩车内前板车载用</small>"},
+    {date: "2023-05-06", price: 13.60, platform: Platform.jd, description: "<small>蓝星（BLUESTAR）普通玻璃水清洁剂-2℃ 2L 2瓶去油膜玻璃清洁剂</small>"},
     {date: "2023-05-06", price: 830.00, platform: Platform.wx, description: "高隔热玻璃膜"},
     {date: "2023-04-19", price: 17.82, platform: Platform.tb, description: "仪表台防滑垫"},
     {date: "2023-04-19", price: 91.00, platform: Platform.tb, description: "2个钥匙套"},
