@@ -7,6 +7,8 @@ interface Item {
 }
 
 const detail: Item[] = [
+    {date: "2024-01-15", unit_price: 8.13, oil_volume: 360.00, amount: 44.29},
+    {date: "2024-01-13", unit_price: 8.20, oil_volume: 230.00, amount: 28.09},
     {date: "2024-01-03", unit_price: 8.03, oil_volume: 24.91, amount: 200.00},
     {date: "2023-11-24", unit_price: 8.43, oil_volume: 23.73, amount: 200.00},
     {date: "2023-11-13", unit_price: 8.72, oil_volume: 22.94, amount: 200.00},
@@ -61,7 +63,7 @@ const prices: number[] = detail.map((data) => data.unit_price);
 export default {
     headers: {date: '日期', unit_price: '单价', oil_volume: '油量', type: '型号', amount: '金额'},
     load_item_length: 5,
-    total_kilometers: 21143,
+    total_kilometers: 22105,
     detail: detail.map((data: Item): Item => {
         return {
             date: data.date,
