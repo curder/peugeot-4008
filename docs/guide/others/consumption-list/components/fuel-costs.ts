@@ -1,14 +1,17 @@
 interface Item {
     date: string,
-    unit_price: number,
+    unit_price: any,
     oil_volume: any,
     amount: any,
     type?: string,
 }
 
-const detail: Item[] = [
-    {date: "2024-01-15", unit_price: 8.13, oil_volume: 360.00, amount: 44.29},
-    {date: "2024-01-13", unit_price: 8.20, oil_volume: 230.00, amount: 28.09},
+const total_kilometers: number = 22805;
+
+const items: Item[] = [
+    {date: "2024-02-09", unit_price: 8.33, oil_volume: 48.02, amount: 400.00},
+    {date: "2024-01-15", unit_price: 8.13, oil_volume: 44.29, amount: 360.00},
+    {date: "2024-01-13", unit_price: 8.20, oil_volume: 28.09, amount: 230.00},
     {date: "2024-01-03", unit_price: 8.03, oil_volume: 24.91, amount: 200.00},
     {date: "2023-11-24", unit_price: 8.43, oil_volume: 23.73, amount: 200.00},
     {date: "2023-11-13", unit_price: 8.72, oil_volume: 22.94, amount: 200.00},
@@ -58,22 +61,29 @@ const detail: Item[] = [
     {date: "2023-03-10", unit_price: 8.29, oil_volume: 45.80, amount: 379.68},
     {date: "2023-02-28", unit_price: 8.32, oil_volume: 50.50, amount: 420.16},
 ];
-const prices: number[] = detail.map((data) => data.unit_price);
+// const prices: number[] = items.map((data) => data.unit_price);
+// 消耗总油量
+const total_oil_volume: number = Number(items.map((data: Item) => data.oil_volume).reduce((prev, curr) => prev + curr).toFixed(2));
+// 油费合计
+const total_amount: number = Number(items.map((data: Item) => Number(data.amount)).reduce((prev: number, curr: number) => prev + curr).toFixed(2));
+// 平均油价
+const price_avg: number = Number((total_amount / total_oil_volume).toFixed(2));
+
+const headers: Item = {date: '日期', unit_price: '单价', oil_volume: '油量', type: '型号', amount: '金额'};
+const details: Item[] = items.map((data: Item): Item => ({
+    date: data.date,
+    unit_price: data.unit_price.toFixed(2),
+    oil_volume: data.oil_volume.toFixed(2),
+    type: data.type ?? '95<small>#</small>',
+    amount: data.amount.toFixed(2),
+}));
 
 export default {
-    headers: {date: '日期', unit_price: '单价', oil_volume: '油量', type: '型号', amount: '金额'},
-    load_item_length: 5,
-    total_kilometers: 22105,
-    detail: detail.map((data: Item): Item => {
-        return {
-            date: data.date,
-            unit_price: data.unit_price,
-            oil_volume: data.oil_volume.toFixed(2),
-            type: data.type ?? '95<small>#</small>',
-            amount: data.amount.toFixed(2),
-        };
-    }),
-    total_oil_volume: detail.map((data: Item) => data.oil_volume).reduce((prev, curr) => prev + curr).toFixed(2),
-    price_avg: (prices.reduce(((prev: number, curr: number) => prev + curr)) / prices.length).toFixed(2),
-    total_amount: detail.map((data: Item) => Number(data.amount)).reduce((prev: number, curr: number) => prev + curr).toFixed(2),
+    total_kilometers,
+    load_item_length: Object.keys(headers).length,
+    headers,
+    details,
+    total_oil_volume,
+    total_amount,
+    price_avg,
 }
