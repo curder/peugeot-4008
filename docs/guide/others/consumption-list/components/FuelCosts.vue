@@ -17,7 +17,8 @@ const loadLess = () => hide.value = false
     <p>
       消耗总油量：<strong><code>{{ fuelCosts.total_oil_volume }}</code></strong> 升，
       平均油价：<strong><code>{{ fuelCosts.price_avg }}</code></strong> 元，
-      油费合计：<strong><code>{{ fuelCosts.total_amount }}</code></strong> 元。
+      油费合计：<strong><code>{{ fuelCosts.total_amount }}</code></strong> 元，
+      加油总次数：<strong><code>{{ fuelCosts.total_number}}</code></strong>次。
     </p>
   </blockquote>
 

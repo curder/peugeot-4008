@@ -68,6 +68,8 @@ const total_oil_volume: number = Number(items.map((data: Item) => data.oil_volum
 const total_amount: number = Number(items.map((data: Item) => Number(data.amount)).reduce((prev: number, curr: number) => prev + curr).toFixed(2));
 // 平均油价
 const price_avg: number = Number((total_amount / total_oil_volume).toFixed(2));
+// 加油次数
+const total_number: number = items.length;
 
 const headers: Item = {date: '日期', unit_price: '单价', oil_volume: '油量', type: '型号', amount: '金额'};
 const details: Item[] = items.map((data: Item): Item => ({
@@ -85,5 +87,6 @@ export default {
     details,
     total_oil_volume,
     total_amount,
+    total_number,
     price_avg,
 }
