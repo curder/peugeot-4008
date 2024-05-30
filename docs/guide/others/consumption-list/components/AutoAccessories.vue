@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import autoAccessories from "./auto-accessories";
-import { ref } from 'vue';
+import {ref} from 'vue';
 
 const header_keys = Object.keys(autoAccessories.headers)
 
@@ -36,14 +36,13 @@ const loadLess = () => hide.value = false
         <td v-html="data[header_keys[3]]"></td>
       </tr>
     </template>
-    <tr v-if="!hide">
+    <tr>
       <td class="text-center" :colspan="header_keys.length">
-        <a href="javascript:void(0);" @click="loadMore">加载更多...</a>
-      </td>
-    </tr>
-    <tr v-if="hide">
-      <td class="text-center" :colspan="header_keys.length">
-        <a href="javascript:void(0);" @click="loadLess">收起一些...</a>
+        <button v-if="!hide" class="font-bold text-blue-500 hover:underline cursor-pointer" @click="loadMore">
+          点击加载更多
+        </button>
+        <button v-else class="font-bold text-blue-500 hover:underline cursor-pointer" @click="loadLess">点击收起一些
+        </button>
       </td>
     </tr>
     </tbody>
@@ -52,5 +51,22 @@ const loadLess = () => hide.value = false
 <style scoped>
 .text-center {
   text-align: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-blue-500 {
+  --tw-text-opacity: 1;
+  color: var(--vp-c-brand-1)
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
 }
 </style>

@@ -44,14 +44,13 @@ const loadLess = () => hide.value = false
         <td v-html="data[header_keys[4]]"></td>
       </tr>
     </template>
-    <tr v-if="!hide">
-      <td :colspan="header_keys.length" class="text-center">
-        <a @click="loadMore" href="javascript:void(0);">加载更多...</a>
-      </td>
-    </tr>
-    <tr v-if="hide">
-      <td :colspan="header_keys.length" class="text-center">
-        <a @click="loadLess" href="javascript:void(0);">收起一些...</a>
+    <tr>
+      <td class="text-center" :colspan="header_keys.length">
+        <button v-if="!hide" class="font-bold text-blue-500 hover:underline cursor-pointer" @click="loadMore">
+          点击加载更多
+        </button>
+        <button v-else class="font-bold text-blue-500 hover:underline cursor-pointer" @click="loadLess">点击收起一些
+        </button>
       </td>
     </tr>
     </tbody>
@@ -60,5 +59,22 @@ const loadLess = () => hide.value = false
 <style scoped>
 .text-center {
   text-align: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-blue-500 {
+  --tw-text-opacity: 1;
+  color: var(--vp-c-brand-1)
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
 }
 </style>
