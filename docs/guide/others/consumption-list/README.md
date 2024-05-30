@@ -11,7 +11,7 @@ import AutoAccessories from './components/AutoAccessories.vue';
 
 21款标致 4008 1.6T科技版([懂车帝](https://www.dongchedi.com/auto/series/340/model-53344)、[汽车之家](https://www.autohome.com.cn/spec/50261/#pvareaid=2042251)) 是在 2023-02-28 号从山东青岛福航的 4S 店提的，车辆的制造日期是 2022 年 01 月 07 日。
 
-下面对车辆使用过程中产生的油费、汽车用品、停车费、保养和保险等费用做一个记录，方便随时查看养车费用。
+下面对车辆使用过程中产生的燃油、汽车用品、停车、保养和保险等费用做一个记录，方便随时查看养车费用。
 
 ## 购车费用
 

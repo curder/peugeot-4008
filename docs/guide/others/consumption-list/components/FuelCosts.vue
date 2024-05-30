@@ -10,7 +10,7 @@ const loadLess = () => hide.value = false
 
 </script>
 <template>
-  <h2>油费</h2>
+  <h2 id="燃油费用" tabindex="-1">燃油费用<a href="#燃油费用" class="header-anchor"></a></h2>
   <blockquote>
     <p>当前公里数：<strong><code>{{ fuelCosts.total_kilometers }}</code></strong> 公里。</p>
     <br/>
