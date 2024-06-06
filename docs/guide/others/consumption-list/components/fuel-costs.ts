@@ -6,7 +6,7 @@ interface Item {
     type?: string,
 }
 
-const total_kilometers: number = 22805;
+const total_kilometers: number = 23170;
 
 const items: Item[] = [
     {date: "2024-05-31", unit_price: 8.52, oil_volume: 27.58, amount: 235.00},
