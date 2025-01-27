@@ -9,6 +9,7 @@ interface Item {
 const total_kilometers: number = 23170;
 
 const items: Item[] = [
+    {date: "2025-01-27", unit_price: 8.27, oil_volume: 24.18, amount: 200.00},
     {date: "2024-10-06", unit_price: 7.85, oil_volume: 39.49, amount: 310.00},
     {date: "2024-10-05", unit_price: 7.78, oil_volume: 38.56, amount: 300.00},
     {date: "2024-10-01", unit_price: 7.85, oil_volume: 46.24, amount: 363.00},
