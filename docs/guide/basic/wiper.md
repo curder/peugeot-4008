@@ -2,7 +2,7 @@
 
 标致 4008 科技版的雨刮操作杆位于主驾驶位方向盘的右侧。包括前雨刮和后雨刮的操作：
 
-![](./images/wiper/wiper-tool.jpg)
+![Wiper Tool](./images/wiper/wiper-tool.jpg)
 
 ## 前雨刮
 
@@ -23,27 +23,25 @@
 
 #### 开启
 
-![](./images/wiper/start-wiper-auto-mode.png)
+![Start Wiper Auto Mode](./images/wiper/start-wiper-auto-mode.png)
 
 向下拨组合开关组合仪表指示灯点亮，并伴随有提示信息。
 
-![](./images/wiper/wiper-auto-mode.png)
+![Wiper Auto Mode](./images/wiper/wiper-auto-mode.png)
 
 #### 关闭
 
-![](./images/wiper/stop-wiper-auto-mode.png)
+![Stop Wiper Auto Mode](./images/wiper/stop-wiper-auto-mode.png)
 
 再次向下拨组合开关，或把开关拨到另一个位置（int ，1 或 2）组合仪表指示灯熄灭，并伴随有提示信息。
-
 
 ### 特殊位置
 
 在点火开关关闭之后的短时间内，拨动雨刮组合开关，雨刮片将置于风窗玻璃中央。
 
-![](./images/wiper/wiper-maintenance-mode.png)
+![Wiper Maintenance Mode](./images/wiper/wiper-maintenance-mode.png)
 
 在此情况下，可以清洁或更换雨刮片，冬季停车时也可使用此位置。接通点火开关后操作雨刮组合开关，可使雨刮片返回正常位置。
-
 
 ## 后雨刮
 

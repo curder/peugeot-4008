@@ -2,18 +2,22 @@
 aside: false
 ---
 
-<script setup lang="ts">
-import FuelCosts from './components/FuelCosts.vue';
-import AutoAccessories from './components/AutoAccessories.vue';
-</script>
-
 # 养车费用
 
+<!-- markdownlint-disable MD013 -->
+
 21 款标致 4008 1.6T 科技版([懂车帝](https://www.dongchedi.com/auto/series/340/model-53344)、[汽车之家](https://www.autohome.com.cn/spec/50261/#pvareaid=2042251)) 是在 2023-02-28 号从山东青岛福航的 4S 店提的，车辆的制造日期是 2022 年 01 月 07 日。
+
+<!-- markdownlint-enable MD013 -->
 
 下面对车辆使用过程中产生的燃油、汽车用品、停车、保养和保险等费用做一个记录，方便随时查看养车费用。
 
 ## 购车费用
+
+<script setup lang="ts">
+import FuelCosts from './components/FuelCosts.vue';
+import AutoAccessories from './components/AutoAccessories.vue';
+</script>
 
 购车车价为：`168,000` 元 (含车辆购置税和交强险)，保险：`4,258.59` 元，总计：**171,308.59** 元。
 
@@ -40,12 +44,16 @@ import AutoAccessories from './components/AutoAccessories.vue';
 
 > 当前总计汽车保养费：**2349.90** 元。
 
+<!-- markdownlint-disable MD013 -->
+
 | 日期       | 保养类型   | 费用                       | 当前公里数 | 保养内容                                                         | 下次保养日期 | 下次保养里程 |
 | ---------- | ---------- | :------------------------- | ---------- | ---------------------------------------------------------------- | ------------ | :----------- |
 | 2024-09-13 | 第四次保养 | 158.00 元                  | 23300 公里 | 更换机油、机滤<br />胎压、灯光、转向等常规检查<br />车辆简单清洗 | 2025-03-10   | 30000 公里   |
 | 2023-12-29 | 第三次保养 | 9.9 元                     | 21143 公里 | 更换机油、机滤<br />胎压、灯光、转向、清理空调滤芯等常规检查     | 2024-06-29   | 29000 公里   |
 | 2023-06-26 | 第二次保养 | 344.00 + 1955.00 + 1.00 元 | 17589 公里 | 更换机油、机滤和空调滤芯<br />胎压、灯光、转向等常规检查         | 2023-12-25   | 25000 公里   |
 | 2023-05-24 | 第一次保养 | 0 元                       | 8061 公里  | 更换机油和机滤<br />胎压、灯光、转向等常规检查<br />车辆简单清洗 | 2023-11-23   | 15000 公里   |
+
+<!-- markdownlint-enable MD013 -->
 
 ### 保养费用
 

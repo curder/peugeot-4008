@@ -22,7 +22,7 @@
 - 在夜间照明条件比较好的路上行驶时，应该使用近光灯
 
 ::: details 查看近灯光控制预览图
-![](images/light-control/low-beam-lights.jpg)
+![Low Beam Lights](images/light-control/low-beam-lights.jpg)
 :::
 
 下面看一下如何开启近光灯：
@@ -47,7 +47,7 @@
 - 在跟车时，也不应该使用远光灯，妨碍前方车辆正常行驶
 
 ::: details 查看近灯光控制预览图
-![](images/light-control/high-beam-lights.jpg)
+![High Beam Lights](images/light-control/high-beam-lights.jpg)
 :::
 
 下面看一下如何开启远光灯，远光灯的开启是在近光灯的基础上进行的操作：
@@ -75,7 +75,7 @@
 光线不足的情况下灯光控制杆位于 `AUTO` 位置，或者直接处于 `位置灯` 档位，或者位于 `近光灯 / 远光灯`档位。
 
 ::: details 查看示廓灯控制预览图
-![](images/light-control/position-lights.jpg)
+![Position Lights](images/light-control/position-lights.jpg)
 :::
 
 ## 危险警示灯
@@ -91,7 +91,7 @@
 - 大雾和大暴雨等极端天气情况下，也应该开启双闪
 
 ::: details 查看危险警示灯控制预览图
-![](images/light-control/hazard-warning-lights.jpg)
+![Hazard Warning Lights](images/light-control/hazard-warning-lights.jpg)
 :::
 
 ## 转向灯
@@ -108,7 +108,7 @@
 操作方式：使用灯光控制拨杆向上轻拨，右转向灯闪三下，向上拨到底，右转向灯常闪。
 
 ::: details 查看向右转向灯控制预览图
-![](images/light-control/right-turn-signal-lights.jpg)
+![Right Turn Signal Lights](images/light-control/right-turn-signal-lights.jpg)
 :::
 
 ### 向左转向
@@ -116,5 +116,5 @@
 操作方式：使用灯光控制拨杆向下轻拨，左转向灯闪三下，向下拨到底，左转向灯常闪。
 
 ::: details 查看向左转向灯控制预览图
-![](images/light-control/left-turn-signal-lights.jpg)
+![Left Turn Signal Lights](images/light-control/left-turn-signal-lights.jpg)
 :::

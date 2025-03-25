@@ -7,7 +7,7 @@
 巡航系统的操作杆在主驾驶位的左边灯光控制杆的下方，在正常驾驶时不容易发现它的存在。
 
 ::: details 查看巡航系统操作杆
-![](./images/cruise-system/cruise-control-lever.jpg)
+![Cruise Control Level](./images/cruise-system/cruise-control-lever.jpg)
 :::
 
 巡航的基本的操作逻辑包括：
@@ -30,7 +30,7 @@
 在车速行驶到一定速度后，将拨杆拨动到 **`LIMIT`** 时可以开启定速巡航。
 
 ::: details 开启定速巡航
-![](./images/cruise-system/toggle-cruise-control.jpg)
+![Toggle Cruise Control](./images/cruise-system/toggle-cruise-control.jpg)
 :::
 
 ### `MEM` 存储车速
@@ -48,6 +48,7 @@
 调节巡航速度有两种方式：一种是用过 `+`、`-` 按钮调节；另一种是通过选择车速记忆值来调整巡航车速值。
 
 #### 通过 `+` `-` 按钮调节
+
 当开启车辆巡航时，可以通过巡航操作杆下面的 **`+`**、**`-`** 按钮来增加、降低巡航行驶的初始、最大速度。
 
 > **注意**：巡航速度的调节区分长按和短按。
@@ -61,7 +62,7 @@
 按下 **`MEM`** 按键，切换到所需要的车速值，设定将成为新的巡航车速值。
 
 ::: details 通过 `MEM` 记忆值调节按钮选择巡航速度
-![](./images/cruise-system/mem-to-adjust-the-speed-button.jpg)
+![Mem To Adjust The Speed Button](./images/cruise-system/mem-to-adjust-the-speed-button.jpg)
 :::
 
 ### 巡航模式超车
@@ -75,7 +76,7 @@
 1. 将巡航拨杆拨动到 **`OFF`** 状态来停止定速巡航
 2. 按左侧按钮临时切换巡航状态，开启或者暂停
    ::: details 按下左侧按钮切换巡航状态
-   ![](./images/cruise-system/toggle-cruise-state.jpg)
+   ![Toggle Cruise State](./images/cruise-system/toggle-cruise-state.jpg)
    :::
 3. 踩下制动踏板来退出定速巡航
 
@@ -94,7 +95,7 @@
 在车速行驶到一定速度后，将拨杆拨动到 **`CRUISE`** 时可以开启自适应巡航。
 
 ::: details 开启自适应巡航
-![](./images/cruise-system/toggle-adaptive-cruise.jpg)
+![Toggle Adaptive Cruise](./images/cruise-system/toggle-adaptive-cruise.jpg)
 :::
 
 ### `MEM` 存储车速
@@ -112,6 +113,7 @@
 调节巡航速度有两种方式：一种是用过 `+`、`-` 按钮调节；另一种是通过选择车速记忆值来调整巡航车速值。
 
 #### 通过 `+` `-` 按钮调节
+
 当开启车辆巡航时，可以通过巡航操作杆下面的 **`+`**、**`-`** 按钮来增加、降低巡航行驶的初始、最大速度。
 
 > **注意**：巡航速度的调节区分长按和短按。
@@ -125,7 +127,7 @@
 按下 **`MEM`** 按键，点击切换到所需要的车速值，设定将成为新的巡航车速值。
 
 ::: details 通过 `MEM` 记忆值调节按钮选择巡航速度
-![](./images/cruise-system/mem-to-adjust-the-speed-button.jpg)
+![Mem To Adjust The Speed Button](./images/cruise-system/mem-to-adjust-the-speed-button.jpg)
 :::
 
 ### 巡航模式超车
@@ -141,7 +143,7 @@
 - **近**（1 条横杠）
 
 ::: details 调整跟车距离
-![](./images/cruise-system/adjust-the-following-distance.jpg)
+![Adjust The Following Distance](./images/cruise-system/adjust-the-following-distance.jpg)
 :::
 
 可以通过上方按钮修改跟车距离：
@@ -158,13 +160,13 @@
 1. 将巡航拨杆拨动到 **`OFF`** 状态来停止自适应巡航
 2. 按左侧按钮临时切换巡航状态，开启或者暂停
    ::: details 按下左侧按钮切换巡航状态
-   ![](./images/cruise-system/toggle-cruise-state.jpg)
+   ![Toggle Cruise State](./images/cruise-system/toggle-cruise-state.jpg)
    :::
 3. 踩下制动踏板来退出自适应巡航
-
 
 ## 使用案例
 
 当道路前方没有车辆时，自适应巡航（ACC）会以一定的速度巡航，巡航的车速在设定的车速限值范围内
-   - 当雷达监测范围内出现车辆时，如果车速过高且车辆之间的距离不足时，汽车会减速，并以一定的车速跟随前车行驶，保持安全距离
-   - 若前车离开当前行驶的车道，则本车会自动加速至设定车速
+
+- 当雷达监测范围内出现车辆时，如果车速过高且车辆之间的距离不足时，汽车会减速，并以一定的车速跟随前车行驶，保持安全距离
+- 若前车离开当前行驶的车道，则本车会自动加速至设定车速
