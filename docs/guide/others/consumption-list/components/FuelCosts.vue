@@ -7,7 +7,6 @@ const header_keys = Object.keys(fuelCosts.headers);
 const hide = ref(false);
 const loadMore = () => (hide.value = true);
 const loadLess = () => (hide.value = false);
-console.log(fuelCosts);
 </script>
 <template>
   <h2 id="燃油费用" tabindex="-1">
