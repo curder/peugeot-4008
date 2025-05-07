@@ -1,4 +1,4 @@
-const enum Platform {
+enum Platform {
     xy = '咸鱼APP',
     jd = '京东APP',
     pdd = '拼多多',
@@ -11,6 +11,7 @@ interface Item {
     platform: Platform,
     description: string,
 }
+
 const detail: Item[] = [
     {date: "2023-12-31", price: 97.18, platform: Platform.jd, description: "<small>蓝星(BLUESTAR)四季玻璃水清洗剂-30℃ 2L 8瓶去油膜玻璃清洁剂</small>"},
     {date: "2023-07-12", price: 117.74, platform: Platform.xy, description: "<small>LanParte汽车拍摄车载手机支架万向固定车内吸盘式越野车专用防抖</small>"},
@@ -31,17 +32,14 @@ const detail: Item[] = [
     {date: "2023-03-02", price: 329.00, platform: Platform.tb, description: "无线洗车机"},
 ];
 
-
 export default {
     headers: {date: '购买日期', price: '价格', platform: '平台', description: '其它说明'},
     load_item_length: 5,
-    detail: detail.map((data: Item): Item => {
-        return {
-            date: data.date,
-            price: data.price.toFixed(2),
-            platform: data.platform,
-            description: data.description
-        };
-    }),
+    detail: detail.map((data: Item): Item => ({
+        date: data.date,
+        price: data.price.toFixed(2),
+        platform: data.platform,
+        description: data.description
+    })),
     total_price: detail.map((data: Item) => data.price).reduce((prev: number, curr: number) => prev + curr).toFixed(2),
 }

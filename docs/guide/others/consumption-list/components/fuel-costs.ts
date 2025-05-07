@@ -7,7 +7,7 @@ interface Item {
 }
 
 // 总里程数
-const total_kilometers = 23170;
+const total_kilometers: number = 26170;
 
 // 加油记录
 const items: Item[] = [
@@ -107,7 +107,7 @@ const details: Item[] = items.map(
         date: data.date,
         unit_price: data.unit_price.toFixed(2),
         oil_volume: data.oil_volume.toFixed(2),
-        type: data.type ?? "95<small>#</small>",
+        type: data.type ?? "95<small>&sharp;</small>",
         amount: data.amount.toFixed(2),
     })
 );
