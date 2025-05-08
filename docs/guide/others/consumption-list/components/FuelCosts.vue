@@ -2,9 +2,8 @@
 import fuelCosts from "./fuel-costs";
 import { ref } from "vue";
 
+const hide = ref<boolean>(false);
 const header_keys = Object.keys(fuelCosts.headers);
-
-const hide = ref(false);
 const loadMore = () => (hide.value = true);
 const loadLess = () => (hide.value = false);
 </script>
