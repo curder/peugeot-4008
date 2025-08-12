@@ -8,8 +8,8 @@ const loadMore = () => (hide.value = true);
 const loadLess = () => (hide.value = false);
 </script>
 <template>
-  <h2 id="燃油费用" tabindex="-1">
-    燃油费用<a href="#燃油费用" class="header-anchor"></a>
+  <h2 id="fuel-costs" tabindex="-1">
+    燃油费用<a href="#fuel-costs" class="header-anchor"></a>
   </h2>
   <blockquote>
     <p>

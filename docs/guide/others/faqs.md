@@ -1,4 +1,4 @@
-# 常见问题
+# 常见问题 {#faqs}
 
 收集用车过程中一些常见的问题，比如：
 
@@ -8,7 +8,7 @@
 - [手动开关后视镜](#manually-switch-rearview-mirror)
 - [加注玻璃水](#fill-windshield-washer-fluid)
 
-## 切换远光灯
+## 切换远光灯 {#switch-high-beam}
 
 <a id="switch-high-beam"></a>
 
@@ -22,7 +22,7 @@
 ![Light Control Lever](images/faqs/light-control-lever.jpg)
 :::
 
-## 切换雾灯
+## 切换雾灯 {#switch-fog-lights}
 
 <a id="switch-fog-lights"></a>
 
@@ -38,7 +38,7 @@
 >
 > 只有在雾天或下雪天才能使用雾灯。 一旦不需要使用前后雾灯，请立即将其关闭。
 
-## 切换音乐上/下一曲
+## 切换音乐上/下一曲 {#switch-previous-next-music-track}
 
 <a id="switch-previous-next-music-track"></a>
 
@@ -50,7 +50,7 @@
 ![Switch To Next Song](images/faqs/switch-to-next-song.jpg)
 :::
 
-## 手动开关后视镜
+## 手动开关后视镜 {#manually-switch-rearview-mirror}
 
 <a id="manually-switch-rearview-mirror"></a>
 
@@ -62,7 +62,7 @@
 ![Manual Switch Rearview Mirror](images/faqs/manual-switch-rearview-mirror.jpg)
 :::
 
-## 加注玻璃水
+## 加注玻璃水 {#fill-windshield-washer-fluid}
 
 <a id="fill-windshield-washer-fluid"></a>
 

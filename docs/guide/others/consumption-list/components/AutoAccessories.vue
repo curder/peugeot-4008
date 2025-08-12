@@ -9,7 +9,7 @@ const loadMore = () => hide.value = true
 const loadLess = () => hide.value = false
 </script>
 <template>
-  <h2 id="汽车用品" tabindex="-1">汽车用品 <a href="#汽车用品" class="header-anchor"></a></h2>
+  <h2 id="car-supplies" tabindex="-1">汽车用品 <a href="#car-supplies" class="header-anchor"></a></h2>
 
   <blockquote>
     当前总计汽车用品费：<strong>{{ autoAccessories.total_price }}</strong> 元。
