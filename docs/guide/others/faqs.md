@@ -26,7 +26,7 @@
 
 <a id="switch-fog-lights"></a>
 
-在位置灯或大灯点亮时，向上转动开启后雾灯，向下转动关闭后雾灯。
+在**位置灯**或**大灯**点亮时，向上转动开启后雾灯，向下转动关闭后雾灯。
 
 ::: details 切换雾灯拨杆预览图
 ![Fog Light Control Lever](images/faqs/fog-light-control-lever.jpg)
