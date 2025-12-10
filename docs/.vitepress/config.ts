@@ -16,7 +16,9 @@ export default defineConfig({
             label: "章节导航",
             level: 'deep',
         },
-        lastUpdatedText: "最后更新时间",
+        lastUpdated: {
+            text: "最后更新时间",
+        },
         docFooter: {
             prev: '上一页',
             next: '下一页'
