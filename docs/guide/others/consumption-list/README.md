@@ -2,6 +2,11 @@
 aside: false
 ---
 
+<script setup>
+import FuelCosts from './components/FuelCosts.vue';
+import AutoAccessories from './components/AutoAccessories.vue';
+</script>
+
 # 养车费用 {#car-costs}
 
 <!-- markdownlint-disable MD013 -->
@@ -24,9 +29,6 @@ aside: false
 下面对车辆使用过程中产生的燃油、汽车用品、停车、保养和保险等费用做一个记录，方便随时查看养车费用。
 
 ## 购车费用 {#car-purchase-costs}
-
-<script setup lang="ts">
-</script>
 
 购车车价为：`168,000` 元 (含车辆购置税和交强险)，保险：`4,258.59` 元，总计：**171,308.59** 元。
 
