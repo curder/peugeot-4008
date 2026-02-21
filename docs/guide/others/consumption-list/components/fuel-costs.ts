@@ -11,6 +11,7 @@ const total_kilometers: number = 27570;
 
 // 加油记录
 const items: Item[] = [
+    {date: "2026-02-21", unit_price: 7.39, oil_volume: 27.01, amount: 200.0},
     {date: "2025-12-25", unit_price: 7.14, oil_volume: 42.02, amount: 300.0},
     {date: "2025-10-16", unit_price: 7.51, oil_volume: 26.64, amount: 200.0},
     {date: "2025-10-05", unit_price: 7.51, oil_volume: 26.64, amount: 200.0},
