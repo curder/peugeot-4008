@@ -13,6 +13,7 @@ interface Item {
 }
 
 const detail: Item[] = [
+    {date: "2026-09-30", price: 9.98, platform: Platform.jd, description: "汽车车钥匙电池CR2032*6"},
     {date: "2023-12-31", price: 97.18, platform: Platform.jd, description: "<small>蓝星(BLUESTAR)四季玻璃水清洗剂-30℃ 2L 8瓶去油膜玻璃清洁剂</small>"},
     {date: "2023-07-12", price: 117.74, platform: Platform.xy, description: "<small>LanParte汽车拍摄车载手机支架万向固定车内吸盘式越野车专用防抖</small>"},
     {date: "2023-06-06", price: 178.8, platform: Platform.jd, description: "米家小米充气宝2"},
