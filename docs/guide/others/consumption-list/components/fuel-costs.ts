@@ -7,7 +7,7 @@ interface Item {
 }
 
 // 总里程数
-const total_kilometers: number = 30055;
+const total_kilometers: number = 30715;
 
 // 加油记录
 const items: Item[] = [
