@@ -5,7 +5,7 @@ enum Platform {
     tb = '淘宝',
     wx = '微信商城',
 }
-interface Item {
+export interface Item {
     date: string,
     price: number,
     platform: Platform,
@@ -34,6 +34,9 @@ const detail: Item[] = [
     {date: "2023-03-02", price: 127.00, platform: Platform.tb, description: "后备箱垫"},
     {date: "2023-03-02", price: 329.00, platform: Platform.tb, description: "无线洗车机"},
 ];
+
+/** 汽车用品购买记录（按时间倒序） */
+export const records: Item[] = detail;
 
 /** 表头，顺序与表格列一致 */
 export const headers: {key: Field; label: string}[] = [
@@ -69,5 +72,6 @@ export default {
     header_labels,
     visible_item_count,
     rows,
+    records,
     total_price,
 };

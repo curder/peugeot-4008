@@ -5,6 +5,7 @@ title: 养车费用
 
 <script setup>
 import CostSummary from './components/CostSummary.vue';
+import CostMetrics from './components/CostMetrics.vue';
 import PurchaseCosts from './components/PurchaseCosts.vue';
 import FuelCosts from './components/FuelCosts.vue';
 import AutoAccessories from './components/AutoAccessories.vue';
@@ -13,6 +14,7 @@ import MaintenanceTable from './components/MaintenanceTable.vue';
 import MaintenanceCosts from './components/MaintenanceCosts.vue';
 import MaintenanceSchedule from './components/MaintenanceSchedule.vue';
 import InsuranceTable from './components/InsuranceTable.vue';
+import YearlyCostTable from './components/YearlyCostTable.vue';
 </script>
 
 # 养车费用 {#car-costs}
@@ -22,6 +24,8 @@ import InsuranceTable from './components/InsuranceTable.vue';
 是 2023-02-28 从山东青岛福航的 4S 店提的，车辆的制造日期是 2022 年 01 月 07 日。
 
 <CostSummary />
+
+<CostMetrics />
 
 下面对车辆使用过程中产生的燃油、汽车用品、停车、保养和保险等费用做一个记录，方便随时查看养车费用。
 
@@ -64,3 +68,7 @@ import InsuranceTable from './components/InsuranceTable.vue';
 3. 附加医保外医疗费用责任险（三者）
 4. 机动车损失保险
 5. 驾乘险
+
+## 按年费用 {#yearly-costs}
+
+<YearlyCostTable />

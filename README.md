@@ -41,7 +41,8 @@ components/
 ├── maintenance.ts       # 保养记录（含费用明细、保养周期对比）
 ├── insurance.ts         # 保险记录
 ├── purchase.ts          # 购车
-└── summary.ts           # 汇总（分类合计与总计）
+├── summary.ts           # 汇总（分类合计、总计与每公里成本）
+└── yearly.ts            # 按年份汇总
 ```
 
 ## 部署

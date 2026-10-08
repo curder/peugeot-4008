@@ -1,4 +1,4 @@
-interface Item {
+export interface Item {
     date: string;
     unit_price: number;
     oil_volume: number;
@@ -9,7 +9,7 @@ interface Item {
 type Field = "date" | "unit_price" | "oil_volume" | "type" | "amount";
 
 // 总里程数
-const total_kilometers: number = 31250;
+export const total_kilometers: number = 31250;
 
 // 加油记录
 const items: Item[] = [
@@ -82,7 +82,10 @@ const items: Item[] = [
     {date: "2023-03-10", unit_price: 8.29, oil_volume: 45.8, amount: 379.68},
     {date: "2023-02-28", unit_price: 8.32, oil_volume: 50.5, amount: 420.16},
 ];
-// const prices: number[] = items.map((data) => data.unit_price);
+
+/** 加油记录（按时间倒序） */
+export const records: Item[] = items;
+
 // 消耗总油量
 const total_oil_volume: number = Number(
     items
@@ -141,6 +144,7 @@ export default {
     headers,
     header_labels,
     rows,
+    records,
     total_oil_volume,
     oil_consumption,
     total_amount,

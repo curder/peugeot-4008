@@ -1,3 +1,6 @@
+/** 购车日期 */
+export const date: string = "2023-02-28";
+
 /** 购车车价（元），含车辆购置税和交强险 */
 export const price: number = 168000.0;
 
@@ -11,6 +14,7 @@ export const compulsory_insurance_included_in_price: number = 950.0;
 export const total: number = price - compulsory_insurance_included_in_price + insurance;
 
 export default {
+    date,
     price,
     insurance,
     compulsory_insurance_included_in_price,

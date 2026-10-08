@@ -87,6 +87,7 @@ config:
       - a
       - script
       - CostSummary
+      - CostMetrics
       - PurchaseCosts
       - FuelCosts
       - AutoAccessories
@@ -95,6 +96,7 @@ config:
       - MaintenanceCosts
       - MaintenanceSchedule
       - InsuranceTable
+      - YearlyCostTable
   MD040:
     language_only: false
     allowed_languages:

@@ -25,7 +25,29 @@ export const categories: CostCategory[] = [
 /** 当前费用总计（元） */
 export const total: number = categories.reduce((sum, category) => sum + category.amount, 0);
 
+/** 用车费用总计（元），不含购车费用 */
+export const running_total: number = categories
+    .filter((category) => category.key !== "purchase")
+    .reduce((sum, category) => sum + category.amount, 0);
+
+/** 总里程（公里） */
+export const kilometers: number = fuel.total_kilometers;
+
+/** 每公里总成本（元/公里） */
+export const total_per_kilometer: number = total / kilometers;
+
+/** 每公里用车成本（元/公里），不含购车费用 */
+export const running_per_kilometer: number = running_total / kilometers;
+
+/** 每公里油费（元/公里） */
+export const fuel_per_kilometer: number = fuel.total_amount / kilometers;
+
 export default {
     categories,
     total,
+    running_total,
+    kilometers,
+    total_per_kilometer,
+    running_per_kilometer,
+    fuel_per_kilometer,
 };
