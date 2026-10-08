@@ -1,18 +1,31 @@
 {
   "name": "peugeot-4008",
-  "description": "Record some experience of using Peugeot 4008.",
-  "repository": "git@github.com:curder/peugeot-4008.git",
-  "author": "curder <q.curder@gmail.com>",
+  "private": true,
+  "description": "记录标致 4008 日常用车经验的 VitePress 站点。",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/curder/peugeot-4008.git"
+  },
+  "author": "curder",
   "license": "MIT",
   "type": "module",
+  "packageManager": "yarn@1.22.22",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "fix": "npx markdownlint-cli2 --config .markdownlint-cli2.yaml --fix"
+    "lint": "yarn lint:md && yarn typecheck",
+    "lint:md": "markdownlint-cli2 --config .markdownlint-cli2.yaml",
+    "fix": "markdownlint-cli2 --config .markdownlint-cli2.yaml --fix",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.json"
   },
   "devDependencies": {
     "markdownlint-cli2": "^0.17.2",
-    "vitepress": "^1.0.0"
+    "typescript": "^5.9",
+    "vitepress": "^1.6.4",
+    "vue-tsc": "^3.3.12"
   }
 }
