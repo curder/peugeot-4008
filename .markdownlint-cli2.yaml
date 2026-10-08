@@ -70,6 +70,11 @@ config:
     # Only check sibling headings.
     siblings_only: true
 
+  # MD025/single-title - Multiple top-level headings in the same document.
+  MD025:
+    # 不把 front matter 的 title 当作文档标题，避免与页面 H1 重复计数
+    front_matter_title: ""
+
   # MD033/no-inline-html - Inline HTML.
   MD033:
     # Allowed elements.
@@ -79,8 +84,15 @@ config:
       - span
       - a
       - script
+      - CostSummary
+      - PurchaseCosts
       - FuelCosts
       - AutoAccessories
+      - ParkingTable
+      - MaintenanceTable
+      - MaintenanceCosts
+      - MaintenanceSchedule
+      - InsuranceTable
   MD040:
     language_only: false
     allowed_languages:

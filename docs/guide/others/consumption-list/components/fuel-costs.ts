@@ -1,10 +1,12 @@
 interface Item {
     date: string;
-    unit_price: any;
-    oil_volume: any;
-    amount: any;
+    unit_price: number;
+    oil_volume: number;
+    amount: number;
     type?: string;
 }
+
+type Field = "date" | "unit_price" | "oil_volume" | "type" | "amount";
 
 // 总里程数
 const total_kilometers: number = 31250;
@@ -105,28 +107,40 @@ const oil_consumption: number = Number(
     ((total_oil_volume / total_kilometers) * 100).toFixed(2)
 );
 
-const headers: Item = {
-    date: "日期",
-    unit_price: "单价",
-    oil_volume: "油量",
-    type: "型号",
-    amount: "金额",
-};
-const details: Item[] = items.map(
-    (data: Item): Item => ({
+/** 表头，顺序与表格列一致 */
+export const headers: {key: Field; label: string}[] = [
+    {key: "date", label: "日期"},
+    {key: "unit_price", label: "单价"},
+    {key: "oil_volume", label: "油量"},
+    {key: "type", label: "型号"},
+    {key: "amount", label: "金额"},
+];
+
+/** 表头文案 */
+export const header_labels: string[] = headers.map((header) => header.label);
+
+/** 默认展示的加油记录条数 */
+export const visible_item_count: number = 5;
+
+/** 表格数据，按表头顺序取值 */
+export const rows: string[][] = items.map((data: Item) => {
+    const cells: Record<Field, string> = {
         date: data.date,
         unit_price: data.unit_price.toFixed(2),
         oil_volume: data.oil_volume.toFixed(2),
         type: data.type ?? "95<small>&sharp;</small>",
         amount: data.amount.toFixed(2),
-    })
-);
+    };
+
+    return headers.map((header) => cells[header.key]);
+});
 
 export default {
     total_kilometers,
-    load_item_length: Object.keys(headers).length,
+    visible_item_count,
     headers,
-    details,
+    header_labels,
+    rows,
     total_oil_volume,
     oil_consumption,
     total_amount,

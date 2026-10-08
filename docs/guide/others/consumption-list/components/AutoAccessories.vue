@@ -1,72 +1,16 @@
 <script setup lang="ts">
 import autoAccessories from "./auto-accessories";
-import {ref} from 'vue';
-
-const hide = ref<boolean>(false)
-const header_keys = Object.keys(autoAccessories.headers)
-
-const loadMore = () => hide.value = true
-const loadLess = () => hide.value = false
+import DataTable from "./DataTable.vue";
+import { formatAmount } from "./format";
 </script>
 <template>
-  <h2 id="car-supplies" tabindex="-1">汽车用品 <a href="#car-supplies" class="header-anchor"></a></h2>
+    <blockquote>
+        当前总计汽车用品费：<strong>{{ formatAmount(autoAccessories.total_price) }}</strong> 元。
+    </blockquote>
 
-  <blockquote>
-    当前总计汽车用品费：<strong>{{ autoAccessories.total_price }}</strong> 元。
-  </blockquote>
-
-  <table>
-    <thead>
-    <tr>
-      <th v-for="(header, key) in autoAccessories.headers" :key="key" v-text="header"></th>
-    </tr>
-    </thead>
-    <tbody>
-    <template v-for="(data, key) in autoAccessories.detail" :key="key">
-      <tr v-if="!hide && key < autoAccessories.load_item_length">
-        <td v-html="data[header_keys[0]]"></td>
-        <td v-html="data[header_keys[1]]"></td>
-        <td v-html="data[header_keys[2]]"></td>
-        <td v-html="data[header_keys[3]]"></td>
-      </tr>
-      <tr v-if="hide">
-        <td v-html="data[header_keys[0]]"></td>
-        <td v-html="data[header_keys[1]]"></td>
-        <td v-html="data[header_keys[2]]"></td>
-        <td v-html="data[header_keys[3]]"></td>
-      </tr>
-    </template>
-    <tr>
-      <td class="text-center" :colspan="header_keys.length">
-        <button v-if="!hide" class="font-bold text-blue-500 hover:underline cursor-pointer" @click="loadMore">
-          点击加载更多
-        </button>
-        <button v-else class="font-bold text-blue-500 hover:underline cursor-pointer" @click="loadLess">点击收起一些
-        </button>
-      </td>
-    </tr>
-    </tbody>
-  </table>
+    <DataTable
+        :headers="autoAccessories.header_labels"
+        :rows="autoAccessories.rows"
+        :visible-count="autoAccessories.visible_item_count"
+    />
 </template>
-<style scoped>
-.text-center {
-  text-align: center;
-}
-
-.cursor-pointer {
-  cursor: pointer;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.text-blue-500 {
-  --tw-text-opacity: 1;
-  color: var(--vp-c-brand-1)
-}
-
-.hover\:underline:hover {
-  text-decoration-line: underline;
-}
-</style>

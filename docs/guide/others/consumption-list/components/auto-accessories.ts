@@ -7,10 +7,12 @@ enum Platform {
 }
 interface Item {
     date: string,
-    price: any,
+    price: number,
     platform: Platform,
     description: string,
 }
+
+type Field = 'date' | 'price' | 'platform' | 'description';
 
 const detail: Item[] = [
     {date: "2026-09-30", price: 9.98, platform: Platform.jd, description: "汽车车钥匙电池CR2032*6"},
@@ -33,14 +35,39 @@ const detail: Item[] = [
     {date: "2023-03-02", price: 329.00, platform: Platform.tb, description: "无线洗车机"},
 ];
 
-export default {
-    headers: {date: '购买日期', price: '价格', platform: '平台', description: '其它说明'},
-    load_item_length: 5,
-    detail: detail.map((data: Item): Item => ({
+/** 表头，顺序与表格列一致 */
+export const headers: {key: Field; label: string}[] = [
+    {key: 'date', label: '购买日期'},
+    {key: 'price', label: '价格'},
+    {key: 'platform', label: '平台'},
+    {key: 'description', label: '其它说明'},
+];
+
+/** 表头文案 */
+export const header_labels: string[] = headers.map((header) => header.label);
+
+/** 默认展示的条数 */
+export const visible_item_count: number = 5;
+
+/** 表格数据，按表头顺序取值 */
+export const rows: string[][] = detail.map((data: Item) => {
+    const cells: Record<Field, string> = {
         date: data.date,
         price: data.price.toFixed(2),
         platform: data.platform,
-        description: data.description
-    })),
-    total_price: detail.map((data: Item) => data.price).reduce((prev: number, curr: number) => prev + curr).toFixed(2),
-}
+        description: data.description,
+    };
+
+    return headers.map((header) => cells[header.key]);
+});
+
+/** 汽车用品总费用（元） */
+export const total_price: number = detail.reduce((sum, data) => sum + data.price, 0);
+
+export default {
+    headers,
+    header_labels,
+    visible_item_count,
+    rows,
+    total_price,
+};
