@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import maintenance from "./maintenance";
+import maintenance from "../costs/maintenance";
 import DataTable from "./DataTable.vue";
 import { formatAmount } from "./format";
 
 const headers = ["日期", "保养类型", "费用", "当前公里数", "保养内容", "下次保养日期", "下次保养里程"];
-const rows = maintenance.display_records.map((record) => [
+const rows = maintenance.displayRecords.map((record) => [
     record.date,
     record.type,
     `${formatAmount(record.amount)} 元`,

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import purchase from "./purchase";
+import purchase from "../costs/purchase";
 import { formatAmount } from "./format";
 </script>
 

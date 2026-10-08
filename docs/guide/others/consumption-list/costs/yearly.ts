@@ -1,9 +1,10 @@
-import fuel from "./fuel-costs";
-import accessories from "./auto-accessories";
-import parking from "./parking";
-import maintenance from "./maintenance";
-import insurance from "./insurance";
-import purchase from "./purchase";
+import {records as accessories} from "../data/accessories";
+import {records as fuel} from "../data/fuel";
+import {records as insurance} from "../data/insurance";
+import {records as maintenance} from "../data/maintenance";
+import {records as parking} from "../data/parking";
+import {date as purchaseDate, price as purchasePrice} from "../data/purchase";
+import {round2} from "./round";
 
 export interface YearlyCost {
     /** 年份 */
@@ -34,14 +35,14 @@ interface Entry {
 
 const yearOf = (date: string): string => date.slice(0, 4);
 
-// 各模块的记录按发生日期归入对应年份，购车、保险按开始日期计入
+// 各记录按发生日期归入对应年份，购车与保险按开始日期计入
 const entries: Entry[] = [
-    {year: yearOf(purchase.date), category: "purchase", amount: purchase.price},
-    ...fuel.records.map((record) => ({year: yearOf(record.date), category: "fuel" as const, amount: record.amount})),
-    ...accessories.records.map((record) => ({year: yearOf(record.date), category: "accessories" as const, amount: record.price})),
-    ...parking.records.map((record) => ({year: yearOf(record.start), category: "parking" as const, amount: record.amount})),
-    ...maintenance.records.map((record) => ({year: yearOf(record.date), category: "maintenance" as const, amount: record.amount})),
-    ...insurance.records.map((record) => ({year: yearOf(record.period), category: "insurance" as const, amount: record.paid})),
+    {year: yearOf(purchaseDate), category: "purchase", amount: purchasePrice},
+    ...fuel.map((record) => ({year: yearOf(record.date), category: "fuel" as const, amount: record.amount})),
+    ...accessories.map((record) => ({year: yearOf(record.date), category: "accessories" as const, amount: record.price})),
+    ...parking.map((record) => ({year: yearOf(record.start), category: "parking" as const, amount: record.amount})),
+    ...maintenance.map((record) => ({year: yearOf(record.date), category: "maintenance" as const, amount: record.amount})),
+    ...insurance.map((record) => ({year: yearOf(record.period), category: "insurance" as const, amount: record.paid})),
 ];
 
 const emptyYearlyCost = (year: string): YearlyCost => ({
@@ -66,10 +67,12 @@ for (const entry of entries) {
 }
 
 /** 按年份汇总的费用，最新年份在前 */
-export const years: YearlyCost[] = [...grouped.values()].sort((a, b) => b.year.localeCompare(a.year));
+export const years: YearlyCost[] = [...grouped.values()]
+    .map((item) => ({...item, total: round2(item.total)}))
+    .sort((a, b) => b.year.localeCompare(a.year));
 
 /** 各年份合计之和，与费用总计一致 */
-export const total: number = years.reduce((sum, year) => sum + year.total, 0);
+export const total: number = round2(years.reduce((sum, year) => sum + year.total, 0));
 
 /** 年度平均总费用（元/年） */
 export const average: number = years.length > 0 ? total / years.length : 0;

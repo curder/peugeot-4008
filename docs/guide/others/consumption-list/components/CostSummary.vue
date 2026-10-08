@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import summary from "./summary";
+import summary from "../costs/summary";
 import { formatAmount } from "./format";
 </script>
 

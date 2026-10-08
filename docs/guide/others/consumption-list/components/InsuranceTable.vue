@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import insurance from "./insurance";
+import insurance from "../costs/insurance";
 import DataTable from "./DataTable.vue";
 import { formatAmount } from "./format";
 
@@ -13,7 +13,7 @@ const headers = [
     "实付金额（元）",
     "备注",
 ];
-const rows = insurance.records.map((record) => [
+const rows = insurance.displayRecords.map((record) => [
     `<small>${record.period}</small>`,
     formatAmount(record.compulsory),
     formatAmount(record.vehicleTax),

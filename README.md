@@ -30,20 +30,29 @@ yarn fix              # 自动修复 markdown 格式问题
 
 ## 费用数据
 
-`docs/guide/others/consumption-list/` 下的金额全部由 `components/*.ts` 数据模块派生，
-页面中的分类合计与总费用不再手写，新增记录后合计会自动更新：
+`docs/guide/others/consumption-list/` 下的金额全部由数据派生，页面中的分类合计与总费用不再手写。
+目录按「记录 / 派生 / 展示」三层拆分，依赖方向固定为 `components → costs → data`：
 
 ```text
-components/
-├── fuel-costs.ts        # 加油记录
-├── auto-accessories.ts  # 汽车用品
-├── parking.ts           # 停车费
-├── maintenance.ts       # 保养记录（含费用明细、保养周期对比）
-├── insurance.ts         # 保险记录
-├── purchase.ts          # 购车
-├── summary.ts           # 汇总（分类合计、总计与每公里成本）
-└── yearly.ts            # 按年份汇总
+consumption-list/
+├── data/             # 只有记录，零逻辑
+│   ├── fuel.ts         # 加油记录（含可选 kilometers 仪表里程）
+│   ├── accessories.ts  # 汽车用品
+│   ├── parking.ts      # 停车费
+│   ├── maintenance.ts  # 保养记录与费用明细
+│   ├── insurance.ts    # 保险记录
+│   └── purchase.ts     # 购车
+├── costs/            # 只做派生计算
+│   ├── fuel.ts         # 油耗、油费合计、区间油耗
+│   ├── maintenance.ts  # 明细差额、保养周期对比
+│   ├── summary.ts      # 分类合计、总计、每公里成本
+│   └── yearly.ts       # 按年份汇总
+└── components/       # 只做展示（表格列定义在组件内）
 ```
+
+新增一条记录：在对应的 `data/*.ts` 末尾追加一行即可（按时间正序书写，展示排序由 `costs` 层处理），
+合计、每公里成本与按年汇总会自动更新。给两条及以上的加油记录补上 `kilometers`（本次加油时的仪表盘里程）后，
+页面会自动出现「区间油耗」表格。
 
 ## 部署
 

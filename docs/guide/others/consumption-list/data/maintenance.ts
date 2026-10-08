@@ -26,29 +26,11 @@ export interface MaintenanceRecord {
     details: MaintenanceDetail[];
 }
 
-export interface MaintenanceSchedule {
-    /** 保养类型 */
-    type: string;
-    /** 要求的保养日期 */
-    requiredDate: string;
-    /** 要求的保养里程 */
-    requiredKilometers: number;
-    /** 实际公里数超出要求的公里数，负数表示未超出 */
-    kilometersOver: number;
-    /** 实际日期晚于要求日期的天数，负数表示提前 */
-    daysOver: number;
-}
-
-export interface MaintenanceRecordWithBalance extends MaintenanceRecord {
-    /** 费用总额与明细合计的差额（元），即明细待补充的部分 */
-    unaccounted: number;
-}
-
 /** 首保要求：购车日期 2023-02-28 起 6 个月或 7500 公里 */
-const first_requirement = {date: "2023-08-27", kilometers: 7500};
+export const firstRequirement = {date: "2023-08-27", kilometers: 7500};
 
-// 按时间正序记录，用于推算下一次保养要求，请勿手写合计值。
-const raw_records: MaintenanceRecord[] = [
+// 按时间正序记录，新增记录直接追加到末尾，展示顺序与派生计算由 costs 层处理。
+export const records: MaintenanceRecord[] = [
     {
         date: "2023-05-24",
         type: "第一次保养",
@@ -114,50 +96,3 @@ const raw_records: MaintenanceRecord[] = [
         ],
     },
 ];
-
-const toUTC = (date: string): number => {
-    const [year, month, day] = date.split("-").map(Number);
-
-    return Date.UTC(year, month - 1, day);
-};
-
-/** 两个日期之间的天数，正数表示 to 晚于 from */
-export const daysBetween = (from: string, to: string): number =>
-    Math.round((toUTC(to) - toUTC(from)) / (24 * 60 * 60 * 1000));
-
-export const records: MaintenanceRecordWithBalance[] = raw_records.map((record) => ({
-    ...record,
-    unaccounted: record.amount - record.details.reduce((sum, detail) => sum + detail.amount, 0),
-}));
-
-/** 按时间倒序展示的记录 */
-export const display_records: MaintenanceRecordWithBalance[] = [...records].reverse();
-
-/** 每次保养的「要求 vs 实际」对比，要求取自上一次保养的下次保养要求 */
-export const schedule: MaintenanceSchedule[] = records.map((record, index) => {
-    const requirement = index === 0
-        ? first_requirement
-        : {date: records[index - 1].nextDate, kilometers: records[index - 1].nextKilometers};
-
-    return {
-        type: record.type,
-        requiredDate: requirement.date,
-        requiredKilometers: requirement.kilometers,
-        kilometersOver: record.kilometers - requirement.kilometers,
-        daysOver: daysBetween(requirement.date, record.date),
-    };
-});
-
-/** 按时间倒序展示的「要求 vs 实际」对比 */
-export const display_schedule: MaintenanceSchedule[] = [...schedule].reverse();
-
-export const total: number = records.reduce((sum, record) => sum + record.amount, 0);
-
-export default {
-    first_requirement,
-    records,
-    display_records,
-    schedule,
-    display_schedule,
-    total,
-};

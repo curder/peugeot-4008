@@ -14,3 +14,6 @@ export const formatAmount = (value: number | string): string =>
 /** 数量格式化，最多保留两位小数并使用千分位分隔，例如 31250 -> 31,250 */
 export const formatNumber = (value: number | string): string =>
     number_formatter.format(Number(value));
+
+/** 汽油标号展示，95 -> 95♯ */
+export const formatFuelType = (type: string): string => `${type}<small>&sharp;</small>`;

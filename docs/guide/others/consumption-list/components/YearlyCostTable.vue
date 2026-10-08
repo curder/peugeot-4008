@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import yearly from "./yearly";
+import yearly from "../costs/yearly";
 import DataTable from "./DataTable.vue";
 import { formatAmount } from "./format";
 

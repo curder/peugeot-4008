@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import maintenance from "./maintenance";
+import maintenance from "../costs/maintenance";
 
 const describeKilometers = (kilometersOver: number): string =>
     kilometersOver > 0 ? `公里数超过保养要求 ${kilometersOver} 公里` : "公里数未超过保养要求";
@@ -10,7 +10,7 @@ const describeDays = (daysOver: number): string =>
 
 <template>
     <blockquote>
-        <template v-for="(item, index) in maintenance.display_schedule" :key="item.type">
+        <template v-for="(item, index) in maintenance.displaySchedule" :key="item.type">
             <hr v-if="index > 0" />
             <p><strong>{{ item.type }}</strong></p>
             <p>

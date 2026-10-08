@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import maintenance from "./maintenance";
+import maintenance from "../costs/maintenance";
 import { formatAmount } from "./format";
 </script>
 
 <template>
     <blockquote>
-        <template v-for="(record, index) in maintenance.display_records" :key="record.date">
+        <template v-for="(record, index) in maintenance.displayRecords" :key="record.date">
             <hr v-if="index > 0" />
             <p>
                 <strong>{{ record.type }}（{{ formatAmount(record.amount) }} 元）：</strong>
