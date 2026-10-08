@@ -7,10 +7,11 @@ interface Item {
 }
 
 // 总里程数
-const total_kilometers: number = 30715;
+const total_kilometers: number = 31250;
 
 // 加油记录
 const items: Item[] = [
+    {date: "2026-10-06", unit_price: 9.09, oil_volume: 33.01, amount: 300.0},
     {date: "2026-10-02", unit_price: 9.17, oil_volume: 41.44, amount: 380.0},
     {date: "2026-05-04", unit_price: 8.93, oil_volume: 22.40, amount: 200.0},
     {date: "2026-05-02", unit_price: 9.00, oil_volume: 31.30, amount: 282.0},
