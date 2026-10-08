@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://curder.github.io/peugeot-4008/sitemap.xml

@@ -17,6 +17,8 @@ showFound: true
 # Define glob expressions to ignore.
 ignores:
   - "node_modules/"
+  # 片段文件由 <!--@include:--> 引入，不是独立文档
+  - "docs/**/_partials/**"
 
 # Disable inline config comments.
 noInlineConfig: false

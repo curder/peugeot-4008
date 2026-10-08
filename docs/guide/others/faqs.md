@@ -10,8 +10,6 @@
 
 ## 切换远光灯 {#switch-high-beam}
 
-<a id="switch-high-beam"></a>
-
 标致 4008 的灯光控制拨杆位于方向盘左侧。
 
 **将拨杆向内轻拨一次，远光灯工作一次。**
@@ -23,8 +21,6 @@
 :::
 
 ## 切换雾灯 {#switch-fog-lights}
-
-<a id="switch-fog-lights"></a>
 
 在**位置灯**或**大灯**点亮时，向上转动开启后雾灯，向下转动关闭后雾灯。
 
@@ -40,8 +36,6 @@
 
 ## 切换音乐上/下一曲 {#switch-previous-next-music-track}
 
-<a id="switch-previous-next-music-track"></a>
-
 连接 Carplay 听音乐时，会遇到一个常见的需求，就是切换下一曲音乐。
 
 标致 4008 的切换音乐在主驾位方向盘右方的旋钮，跟其他大多数车型相比不同的操作方式，**切换下一曲向上拨动旋钮，切换下一曲向下拨动旋钮**。
@@ -52,19 +46,15 @@
 
 ## 手动开关后视镜 {#manually-switch-rearview-mirror}
 
-<a id="manually-switch-rearview-mirror"></a>
-
 标致 4008 科技版拥有锁车自动收起后视镜的功能，当遇到窄路避让时，需要驾驶员手动收起后视镜避免刮蹭。
 
-操作方式是：在假设未左侧控制后视镜调节方向的中间的按钮向后拉取可以手动收起后视镜，再次重复操作可以打开后视镜。
+操作方式是：向后拉取驾驶位左侧后视镜调节区域的中间按钮即可手动收起后视镜，再次重复操作可以打开后视镜。
 
 ::: details 手动开关后视镜
 ![Manual Switch Rearview Mirror](images/faqs/manual-switch-rearview-mirror.jpg)
 :::
 
 ## 加注玻璃水 {#fill-windshield-washer-fluid}
-
-<a id="fill-windshield-washer-fluid"></a>
 
 当风窗清洗液到达储液罐的低位时，组合仪表上会有警告灯点亮，并伴随有信息声音提示。
 

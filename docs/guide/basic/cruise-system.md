@@ -35,31 +35,11 @@
 
 ### `MEM` 存储车速 {#mem-store-speed}
 
-开启定速巡航或自适应巡航功能时，其信息会在组合仪表上显示对应符号标识。
-
-当探测到限速牌，系统会显示限速车速值并提示可将其存储为一个新的车速记忆值，`MEM`提示会在屏幕上闪烁几秒钟。
-
-点击 **`MEM`** 车速记忆按键来响应系统建议的车速值，再次按下车速记忆按键来确认与保存此车速值。
-
-> 如果探测到的限速值与设定的限速值差异在 10km/h 以内，`MEM` 标识将不会显示。
+<!--@include: ./_partials/cruise-mem-store-speed.md-->
 
 ### 调节巡航速度 {#adjust-cruise-speed}
 
-调节巡航速度有两种方式：一种是用过 `+`、`-` 按钮调节；另一种是通过选择车速记忆值来调整巡航车速值。
-
-#### 通过 `+` `-` 按钮调节 {#adjust-cruise-speed-plus-minus}
-
-当开启车辆巡航时，可以通过巡航操作杆下面的 **`+`**、**`-`** 按钮来增加、降低巡航行驶的初始、最大速度。
-
-> **注意**：巡航速度的调节区分长按和短按。
->
-> 短按：以 1km/h 的幅度进行增加或降低车速；
->
-> 长按：以 5km/h 的服务进行增加或降低车速；
-
-#### 通过 `MEM` 记忆值调节按钮 {#adjust-cruise-speed-mem}
-
-按下 **`MEM`** 按键，切换到所需要的车速值，设定将成为新的巡航车速值。
+<!--@include: ./_partials/cruise-adjust-speed.md-->
 
 ::: details 通过 `MEM` 记忆值调节按钮选择巡航速度
 ![Mem To Adjust The Speed Button](./images/cruise-system/mem-to-adjust-the-speed-button.jpg)
@@ -100,31 +80,11 @@
 
 ### `MEM` 存储车速 {#mem-store-speed-adaptive}
 
-开启定速巡航或自适应巡航功能时，其信息会在组合仪表上显示对应符号标识。
-
-当探测到限速牌，系统会显示限速车速值并提示可将其存储为一个新的车速记忆值，`MEM`提示会在屏幕上闪烁几秒钟。
-
-点击 **`MEM`** 车速记忆按键来响应系统建议的车速值，再次按下车速记忆按键来确认与保存此车速值。
-
-> 如果探测到的限速值与设定的限速值差异在 10km/h 以内，`MEM` 标识将不会显示。
+<!--@include: ./_partials/cruise-mem-store-speed.md-->
 
 ### 调节巡航速度 {#adjust-adaptive-cruise-speed}
 
-调节巡航速度有两种方式：一种是用过 `+`、`-` 按钮调节；另一种是通过选择车速记忆值来调整巡航车速值。
-
-#### 通过 `+` `-` 按钮调节 {#adjust-adaptive-cruise-speed-plus-minus}
-
-当开启车辆巡航时，可以通过巡航操作杆下面的 **`+`**、**`-`** 按钮来增加、降低巡航行驶的初始、最大速度。
-
-> **注意**：巡航速度的调节区分长按和短按。
->
-> 短按：以 1km/h 的幅度进行增加或降低车速；
->
-> 长按：以 5km/h 的服务进行增加或降低车速；
-
-#### 通过 `MEM` 记忆值调节按钮 {#adjust-adaptive-cruise-speed-mem}
-
-按下 **`MEM`** 按键，点击切换到所需要的车速值，设定将成为新的巡航车速值。
+<!--@include: ./_partials/cruise-adjust-speed.md-->
 
 ::: details 通过 `MEM` 记忆值调节按钮选择巡航速度
 ![Mem To Adjust The Speed Button](./images/cruise-system/mem-to-adjust-the-speed-button.jpg)
