@@ -11,6 +11,7 @@
 | [外部灯光控制](docs/guide/basic/light-control.md) | 近光灯、远光灯、位置灯、雾灯、转向灯、危险警示灯 |
 | [巡航系统](docs/guide/basic/cruise-system.md) | 定速巡航与自适应巡航（ACC）操作方式 |
 | [雨刮器](docs/guide/basic/wiper.md) | 前/后雨刮档位、自动雨刮与雨刮维护位置 |
+| [最佳实践](docs/guide/basic/best-practices.md) | 上车前检查、行驶与停车锁车的通用用车建议 |
 | [常见问题](docs/guide/others/faqs.md) | 远光灯、雾灯、音乐切换、后视镜、玻璃水 |
 | [多媒体静音](docs/guide/others/mute.md) | 方向盘按键静音操作 |
 | [养车费用](docs/guide/others/consumption-list/index.md) | 购车、燃油、用品、停车、保养、保险费用记录 |
