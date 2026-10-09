@@ -77,6 +77,15 @@ export default defineConfig({
     themeConfig: {
         logo: '/images/peugeot-old-logo.svg',
         siteTitle: '标致 4008',
+        // 访问不存在的地址时，VitePress 回退到内置 NotFound 组件，
+        // 它只读取这里的配置（docs/404.md 仅对 /404 路由本身生效）
+        notFound: {
+            code: '404',
+            title: '页面不存在',
+            quote: '抱歉，你访问的页面不存在或已被移动。可以回到首页重新查找，或者使用左上角的搜索。',
+            linkText: '返回首页',
+            linkLabel: '返回首页',
+        },
         outline: {
             label: '章节导航',
             level: 'deep',
