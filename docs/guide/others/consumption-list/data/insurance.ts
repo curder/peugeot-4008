@@ -17,7 +17,7 @@ export interface InsuranceRecord {
     note: string;
 }
 
-// 按时间正序记录，新增记录直接追加到末尾，展示顺序由 costs 层排序。
+// 按时间倒序记录（最新在最前），新增记录插入到开头，方便查看最新数据；展示顺序由 costs 层排序。
 //
 // 待核对（以保单为准，暂不改动）：
 // - 2026-02-28 期「交强险 + 车船税 + 商业险」为 2,925.65 元，与合计 3,385.65 元相差 460.00 元
@@ -25,24 +25,14 @@ export interface InsuranceRecord {
 // - 2025-02-28 期「合计 - 优惠」为 3,157.52 元，与实付 3,156.52 元相差 1.00 元
 export const records: InsuranceRecord[] = [
     {
-        period: "2023-02-28 ~ 2024-02-28",
-        compulsory: 920.0,
+        period: "2026-02-28 ~ 2027-02-28",
+        compulsory: 950.0,
         vehicleTax: 360.0,
-        commercial: 2696.31,
-        premiumTotal: 3976.31,
-        discount: 0,
-        paid: 3976.31,
-        note: "中国平安",
-    },
-    {
-        period: "2024-02-28 ~ 2025-02-28",
-        compulsory: 855.0,
-        vehicleTax: 360.0,
-        commercial: 2054.59,
-        premiumTotal: 3269.59,
-        discount: 512.0,
-        paid: 2757.59,
-        note: "中国平安",
+        commercial: 1615.65,
+        premiumTotal: 3385.65,
+        discount: 257.0,
+        paid: 3128.0,
+        note: "中国人保",
     },
     {
         period: "2025-02-28 ~ 2026-02-28",
@@ -55,13 +45,23 @@ export const records: InsuranceRecord[] = [
         note: "中国人保",
     },
     {
-        period: "2026-02-28 ~ 2027-02-28",
-        compulsory: 950.0,
+        period: "2024-02-28 ~ 2025-02-28",
+        compulsory: 855.0,
         vehicleTax: 360.0,
-        commercial: 1615.65,
-        premiumTotal: 3385.65,
-        discount: 257.0,
-        paid: 3128.0,
-        note: "中国人保",
+        commercial: 2054.59,
+        premiumTotal: 3269.59,
+        discount: 512.0,
+        paid: 2757.59,
+        note: "中国平安",
+    },
+    {
+        period: "2023-02-28 ~ 2024-02-28",
+        compulsory: 920.0,
+        vehicleTax: 360.0,
+        commercial: 2696.31,
+        premiumTotal: 3976.31,
+        discount: 0,
+        paid: 3976.31,
+        note: "中国平安",
     },
 ];

@@ -44,11 +44,14 @@ export const records: MaintenanceWithBalance[] = rawRecords.map((record) => ({
 /** 按日期倒序的记录，供表格展示 */
 export const displayRecords: MaintenanceWithBalance[] = [...records].sort((a, b) => b.date.localeCompare(a.date));
 
+// 保养要求取自上一次保养，因此按日期正序计算，避免受数据文件记录顺序影响
+const chronological: MaintenanceWithBalance[] = [...records].sort((a, b) => a.date.localeCompare(b.date));
+
 /** 每次保养的「要求 vs 实际」对比，要求取自上一次保养的下次保养要求 */
-export const schedule: MaintenanceSchedule[] = records.map((record, index) => {
+export const schedule: MaintenanceSchedule[] = chronological.map((record, index) => {
     const requirement = index === 0
         ? firstRequirement
-        : {date: records[index - 1].nextDate, kilometers: records[index - 1].nextKilometers};
+        : {date: chronological[index - 1].nextDate, kilometers: chronological[index - 1].nextKilometers};
 
     return {
         type: record.type,
